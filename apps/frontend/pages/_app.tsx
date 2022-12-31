@@ -1,15 +1,15 @@
-import { client } from "../lib/apollo";
+import { client } from '../lib/apollo';
 
-import { ApolloProvider } from "@apollo/client";
+import { ApolloProvider } from '@apollo/client';
 
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps<{}>): JSX.Element {
   return (
     <ApolloProvider client={client}>
-         <Component />
+      <Component />
     </ApolloProvider>
-    );
+  );
 }
 
 export default MyApp;
