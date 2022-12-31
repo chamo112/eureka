@@ -1,4 +1,4 @@
-import { client } from '../lib/apollo';
+import { client } from '@/lib/apollo';
 
 import { ApolloProvider } from '@apollo/client';
 
