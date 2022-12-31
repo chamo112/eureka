@@ -1,9 +1,9 @@
 module.exports = {
-  extends: ["next", "turbo", "prettier"],
+  extends: ['next', 'turbo', 'prettier'],
   plugins: ['import', 'unused-imports'],
   rules: {
-    "@next/next/no-html-link-for-pages": "off",
-    "react/jsx-key": "off",
+    '@next/next/no-html-link-for-pages': 'off',
+    'react/jsx-key': 'off',
     'import/order': [
       'error',
       {
