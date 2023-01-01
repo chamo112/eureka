@@ -3,6 +3,7 @@ module.exports = {
   plugins: ['import', 'unused-imports'],
   ignorePatterns: ['*.d.ts', '*.config.js'],
   rules: {
+    'no-console': ['error'],
     '@next/next/no-html-link-for-pages': 'off',
     'import/order': [
       'error',
