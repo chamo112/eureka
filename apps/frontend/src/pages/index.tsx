@@ -19,6 +19,8 @@ export default function Web() {
 
   return (
     <div>
+
+
       {data!.articles.map((article ) => {
         return (
           <div key={article.id}>
