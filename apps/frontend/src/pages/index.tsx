@@ -1,29 +1,29 @@
-import { Button } from 'ui';
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
+import { graphql } from '@/gql/gql';
 
-const GET_ARTICLES = gql`
-    query GetArticles {
+const GatArticles = graphql(`
+    query Article {
         articles {
             id
             title
             body
         }
     }
-`;
+`);
 
 export default function Web() {
-  const {loading, error, data} = useQuery(GET_ARTICLES);
+  const {loading, error, data} = useQuery(GatArticles);
 
   if(loading) return 'loading...'
   if(error) return 'Error!'
 
   return (
     <div>
-      {data.articles.map((item) => {
+      {data!.articles.map((article ) => {
         return (
-          <div key={item.id}>
-            <div>{item.title}</div>
-            <div>{item.body}</div>
+          <div key={article.id}>
+            <div>{article.title}</div>
+            <div>{article.body}</div>
           </div>
         );
       })}
