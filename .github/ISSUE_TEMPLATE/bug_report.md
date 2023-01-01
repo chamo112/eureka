@@ -3,7 +3,8 @@ name: Bug report
 about: 改善案を作成する
 title: "[Bug]: "
 labels: bug
-assignees: ''
+assignees:
+- chamo112
 
 ---
 
