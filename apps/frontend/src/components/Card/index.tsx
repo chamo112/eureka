@@ -11,7 +11,7 @@ export const Index = (props: Article): JSX.Element => {
           <img
             className='h-48 w-full object-cover'
             src={props.imageUrl}
-            alt=''
+            alt={props.title}
           />
         </div>
 
@@ -19,14 +19,15 @@ export const Index = (props: Article): JSX.Element => {
           <div className='flex-1'>
             <p className='text-sm font-medium text-indigo-600'>
               <a
-                href='apps/frontend/src/components#'
+                href='#'
                 className='hover:underline'
               >
                 {props.categoryName}
               </a>
             </p>
+
             <a
-              href={props.href}
+              href={`articles/${props.id}`}
               className='mt-2 block'
             >
               <p className='text-xl font-semibold text-gray-900'>{props.title}</p>
@@ -36,7 +37,7 @@ export const Index = (props: Article): JSX.Element => {
 
           <div className='mt-6 flex items-center'>
             <div className='flex-shrink-0'>
-              <a href={props.author.href}>
+              <a href='#'>
                 <span className='sr-only'>{props.author.name}</span>
                 <img
                   className='h-10 w-10 rounded-full'
@@ -49,7 +50,7 @@ export const Index = (props: Article): JSX.Element => {
             <div className='ml-3'>
               <p className='text-sm font-medium text-gray-900'>
                 <a
-                  href={props.author.href}
+                  href='#'
                   className='hover:underline'
                 >
                   {props.author.name}

@@ -7,7 +7,6 @@ type Article = {
   href: string;
   author: {
     name: string;
-    href: string;
     imageUrl: string;
   };
   datetime: string;

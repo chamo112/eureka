@@ -9,6 +9,10 @@ const queryDocument = graphql(`
       id
       title
       body
+      updatedBy {
+        name
+        picture
+      }
     }
   }
 `);
@@ -24,13 +28,8 @@ const Index = () => {
       <div className='mb-10 md:mb-16'>
         {/* ブログのタイトル */}
         <h2 className='text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6'>
-          Blog
+          Articles
         </h2>
-
-        <p className='max-w-screen-md text-gray-500 md:text-lg text-center mx-auto'>
-          This is a section of some simple filler text, also known as placeholder text. It shares
-          some characteristics of a real written text but is random or otherwise generated.
-        </p>
       </div>
 
       {/* コンテンツ */}
@@ -45,10 +44,8 @@ const Index = () => {
             href='#'
             imageUrl='https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80'
             author={{
-              name: 'Roel Aufderehar',
-              href: '#',
-              imageUrl:
-                'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+              name: `${article.updatedBy!.name}`,
+              imageUrl: `${article.updatedBy!.picture}`,
             }}
             date='Mar 16, 2020'
             datetime='2020-03-16'
