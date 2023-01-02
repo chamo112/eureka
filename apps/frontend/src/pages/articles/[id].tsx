@@ -1,5 +1,6 @@
 import { useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
+import Markdown from 'react-markdown';
 
 import { graphql } from '@/gql';
 
@@ -29,8 +30,8 @@ const ArticlePage = () => {
 
   return (
     <div>
-      <div>{data!.article!.body}</div>
       <div>{id}</div>
+      <Markdown>{data!.article!.body}</Markdown>
     </div>
   );
 };
