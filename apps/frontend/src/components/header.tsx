@@ -1,6 +1,6 @@
 const Header = () => (
   <>
-    <header className='flex justify-between items-center py-4 md:py-8'>
+    <header className='flex justify-between items-center px-8 py-4 border-b'>
       {/* logo - start */}
       <a
         href='/'
