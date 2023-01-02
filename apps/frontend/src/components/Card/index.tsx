@@ -1,21 +1,6 @@
-type Article = {
-  id: string;
-  title: string;
-  body: string;
-  imageUrl: string;
-  categoryName: string;
-  href: string;
-  author: {
-    name: string;
-    href: string;
-    imageUrl: string;
-  };
-  datetime: string;
-  date: string;
-  readingTime: string;
-};
+import Article from '@/components/Card/card';
 
-const Card = (props: Article) => {
+export const Index = (props: Article): JSX.Element => {
   return (
     <>
       <div
@@ -26,7 +11,7 @@ const Card = (props: Article) => {
           <img
             className='h-48 w-full object-cover'
             src={props.imageUrl}
-            alt=''
+            alt={props.title}
           />
         </div>
 
@@ -40,8 +25,9 @@ const Card = (props: Article) => {
                 {props.categoryName}
               </a>
             </p>
+
             <a
-              href={props.href}
+              href={`articles/${props.id}`}
               className='mt-2 block'
             >
               <p className='text-xl font-semibold text-gray-900'>{props.title}</p>
@@ -51,7 +37,7 @@ const Card = (props: Article) => {
 
           <div className='mt-6 flex items-center'>
             <div className='flex-shrink-0'>
-              <a href={props.author.href}>
+              <a href='#'>
                 <span className='sr-only'>{props.author.name}</span>
                 <img
                   className='h-10 w-10 rounded-full'
@@ -64,7 +50,7 @@ const Card = (props: Article) => {
             <div className='ml-3'>
               <p className='text-sm font-medium text-gray-900'>
                 <a
-                  href={props.author.href}
+                  href='#'
                   className='hover:underline'
                 >
                   {props.author.name}
@@ -83,4 +69,4 @@ const Card = (props: Article) => {
   );
 };
 
-export default Card;
+export default Index;
