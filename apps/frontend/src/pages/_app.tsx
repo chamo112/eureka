@@ -10,7 +10,7 @@ import type { AppProps } from 'next/app';
 function MyApp({ Component, pageProps }: AppProps<{}>): JSX.Element {
   return (
     <ApolloProvider client={client}>
-      <div className='max-w-screen-2xl px-4 md:px-8 mx-auto'>
+      <div className='max-w-screen-2xl'>
         <Header />
 
         <Component {...pageProps} />
