@@ -37,24 +37,6 @@ const NotFoundPage = () => {
                     Home
                   </a>
                 </div>
-
-                <div>
-                  <a
-                    href='#'
-                    className='inline-block text-indigo-500 hover:text-indigo-600 active:text-indigo-700 text-sm md:text-base transition duration-100'
-                  >
-                    Search
-                  </a>
-                </div>
-
-                <div>
-                  <a
-                    href='#'
-                    className='inline-block text-indigo-500 hover:text-indigo-600 active:text-indigo-700 text-sm md:text-base transition duration-100'
-                  >
-                    Help
-                  </a>
-                </div>
               </nav>
             </div>
             {/* content - end */}
