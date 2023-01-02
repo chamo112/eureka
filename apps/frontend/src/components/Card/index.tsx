@@ -1,21 +1,6 @@
-type Article = {
-  id: string;
-  title: string;
-  body: string;
-  imageUrl: string;
-  categoryName: string;
-  href: string;
-  author: {
-    name: string;
-    href: string;
-    imageUrl: string;
-  };
-  datetime: string;
-  date: string;
-  readingTime: string;
-};
+import Article from '@/components/Card/card';
 
-const Card = (props: Article) => {
+export const Index = (props: Article): JSX.Element => {
   return (
     <>
       <div
@@ -34,7 +19,7 @@ const Card = (props: Article) => {
           <div className='flex-1'>
             <p className='text-sm font-medium text-indigo-600'>
               <a
-                href='#'
+                href='apps/frontend/src/components#'
                 className='hover:underline'
               >
                 {props.categoryName}
@@ -83,4 +68,4 @@ const Card = (props: Article) => {
   );
 };
 
-export default Card;
+export default Index;

@@ -1,4 +1,4 @@
-const Header = () => (
+const Index = () => (
   <>
     <header className='flex justify-between items-center px-8 py-4 border-b'>
       {/* logo - start */}
@@ -24,13 +24,13 @@ const Header = () => (
       {/* nav - start */}
       <nav className='hidden lg:flex gap-12'>
         <a
-          href='#'
+          href='apps/frontend/src/components#'
           className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
         >
           Home
         </a>
         <a
-          href='#'
+          href='apps/frontend/src/components#'
           className='inline-flex items-center text-indigo-500 text-lg font-semibold gap-1'
         >
           Features
@@ -48,13 +48,13 @@ const Header = () => (
           </svg>
         </a>
         <a
-          href='#'
+          href='apps/frontend/src/components#'
           className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
         >
           Pricing
         </a>
         <a
-          href='#'
+          href='apps/frontend/src/components#'
           className='text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100'
         >
           About
@@ -65,4 +65,4 @@ const Header = () => (
   </>
 );
 
-export default Header;
+export default Index;

@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
 
-import Card from '@/components/card';
+import Card from '@/components/Card/index';
 import { graphql } from '@/gql';
 
 const queryDocument = graphql(`
