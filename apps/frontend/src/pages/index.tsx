@@ -1,4 +1,5 @@
 import { useQuery } from '@apollo/client';
+import Markdown from 'react-markdown';
 
 import { graphql } from '@/gql';
 
@@ -169,6 +170,7 @@ const Index = () => {
             <div className='m-5 border'>
               <a href={`articles/${article.id}`}>
                 <div>{article.title}</div>
+                <Markdown>{article.body}</Markdown>
               </a>
             </div>
           </div>
