@@ -2,6 +2,29 @@ import { faTwitter, faGithub, faInstagram } from '@fortawesome/free-brands-svg-i
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
+const NaviItems = [
+  {
+    title: 'Blog',
+    href: '#',
+  },
+  {
+    title: 'Category',
+    href: '#',
+  },
+  {
+    title: 'Toolbox',
+    href: '#',
+  },
+  {
+    title: 'About',
+    href: '#',
+  },
+  {
+    title: 'Contact',
+    href: '#',
+  },
+];
+
 const iconStyle: React.CSSProperties = { fontSize: 25 };
 const Index = () => (
   <>
@@ -10,43 +33,23 @@ const Index = () => (
         <div className='flex flex-col items-center border-t pt-6'>
           {/* nav - start */}
           <nav className='mb-8 flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6'>
-            <a
-              href='apps/frontend/src/components#'
-              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
-            >
-              About
-            </a>
-            <a
-              href='apps/frontend/src/components#'
-              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
-            >
-              Investor Relations
-            </a>
-            <a
-              href='apps/frontend/src/components#'
-              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
-            >
-              Jobs
-            </a>
-            <a
-              href='apps/frontend/src/components#'
-              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
-            >
-              Press
-            </a>
-            <a
-              href='apps/frontend/src/components#'
-              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
-            >
-              Blog
-            </a>
+            {NaviItems.map((item) => (
+              <div key={item.title}>
+                <a
+                  href={item.href}
+                  className='text-md text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'
+                >
+                  {item.title}
+                </a>
+              </div>
+            ))}
           </nav>
           {/* nav - end */}
 
           {/* social - start */}
           <div className='flex gap-8'>
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               target='_blank'
               className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
             >
@@ -57,7 +60,7 @@ const Index = () => (
             </a>
 
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               target='_blank'
               className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
             >
@@ -68,7 +71,7 @@ const Index = () => (
             </a>
 
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               target='_blank'
               className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
             >

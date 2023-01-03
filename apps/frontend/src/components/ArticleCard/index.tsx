@@ -1,8 +1,21 @@
-import Article from '@/components/Card/card';
+type Article = {
+  id: string;
+  title: string;
+  body: string;
+  imageUrl: string;
+  categoryName: string;
+  href: string;
+  author: {
+    name: string;
+    imageUrl: string;
+  };
+  date: string;
+};
 
 export const Index = (props: Article): JSX.Element => {
   return (
     <>
+      {/* タイトル */}
       <div
         key={props.title}
         className='flex flex-col overflow-hidden rounded-lg shadow-lg'
@@ -27,40 +40,26 @@ export const Index = (props: Article): JSX.Element => {
             </p>
 
             <a
-              href={`articles/${props.id}`}
+              href={`blogs/${props.id}`}
               className='mt-2 block'
             >
-              <p className='text-xl font-semibold text-gray-900'>{props.title}</p>
+              <p className='font-semi-bold text-lg text-gray-900'>{props.title}</p>
               <p className='mt-3 text-base text-gray-500'>{props.body}</p>
             </a>
           </div>
 
           <div className='mt-6 flex items-center'>
             <div className='shrink-0'>
-              <a href='#'>
-                <span className='sr-only'>{props.author.name}</span>
-                <img
-                  className='h-10 w-10 rounded-full'
-                  src={props.author.imageUrl}
-                  alt=''
-                />
-              </a>
+              <img
+                className='h-10 w-10 rounded-full'
+                src={props.author.imageUrl}
+                alt='{props.author.name}'
+              />
             </div>
 
             <div className='ml-3'>
-              <p className='text-sm font-medium text-gray-900'>
-                <a
-                  href='#'
-                  className='hover:underline'
-                >
-                  {props.author.name}
-                </a>
-              </p>
-              <div className='flex space-x-1 text-sm text-gray-500'>
-                <time dateTime={props.datetime}>{props.date}</time>
-                <span aria-hidden='true'>&middot;</span>
-                <span>{props.readingTime} read</span>
-              </div>
+              <p className='text-sm font-medium text-gray-900'>{props.author.name}</p>
+              <p className='text-xs font-medium text-gray-500'>{props.date}</p>
             </div>
           </div>
         </div>
