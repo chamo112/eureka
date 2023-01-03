@@ -28,7 +28,7 @@ const Index = () => {
       <div className='mb-10 md:mb-16'>
         {/* ブログのタイトル */}
         <h2 className='font-semi-bold mb-4 text-center text-xl text-gray-700 md:mb-6 lg:text-3xl'>
-          Articles
+          List of articles
         </h2>
       </div>
 

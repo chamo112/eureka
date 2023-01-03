@@ -40,10 +40,10 @@ export const Index = (props: Article): JSX.Element => {
             </p>
 
             <a
-              href={`articles/${props.id}`}
+              href={`blogs/${props.id}`}
               className='mt-2 block'
             >
-              <p className='text-xl font-semibold text-gray-900'>{props.title}</p>
+              <p className='font-semi-bold text-lg text-gray-900'>{props.title}</p>
               <p className='mt-3 text-base text-gray-500'>{props.body}</p>
             </a>
           </div>
