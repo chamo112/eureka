@@ -4,13 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn codegen &&  next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint --ignore-path ../../.gitignore --fix './**/*.{js,ts,tsx}'",
     "codegen": "graphql-codegen --config codegen.ts",
-    "codegen:watch": "graphql-codegen --watch",
-    "build:vercel": "graphql-codegen --config codegen.ts && next build"
+    "codegen:watch": "graphql-codegen --watch"
   },
   "dependencies": {
     "@apollo/client": "3.7.3",
