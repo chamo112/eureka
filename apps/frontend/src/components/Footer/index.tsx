@@ -14,31 +14,31 @@ const Index = () => (
               href='#'
               className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
             >
+              Blog
+            </a>
+            <a
+              href='#'
+              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+            >
+              Category
+            </a>
+            <a
+              href='#'
+              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+            >
+              Toolbox
+            </a>
+            <a
+              href='#'
+              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+            >
               About
             </a>
             <a
               href='#'
               className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
             >
-              Investor Relations
-            </a>
-            <a
-              href='#'
-              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
-            >
-              Jobs
-            </a>
-            <a
-              href='#'
-              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
-            >
-              Press
-            </a>
-            <a
-              href='#'
-              className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
-            >
-              Blog
+              Contact
             </a>
           </nav>
           {/* nav - end */}
