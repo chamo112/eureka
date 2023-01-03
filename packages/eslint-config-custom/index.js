@@ -1,9 +1,14 @@
 module.exports = {
-  extends: ['next', 'turbo', 'prettier'],
-  plugins: ['import', 'unused-imports'],
-  ignorePatterns: ['*.d.ts', '*.config.js'],
+  plugins: ['import', 'unused-imports', 'tailwindcss'],
+  extends: ['next', 'turbo', 'eslint:recommended', 'prettier', 'plugin:tailwindcss/recommended'],
+  ignorePatterns: ['*.d.ts', '*.config.js', '**/gql/*.ts'],
   rules: {
-    'no-console': ['error'],
+    'no-console': [
+      'error',
+      {
+        allow: ['warn', 'error'],
+      },
+    ],
     '@next/next/no-html-link-for-pages': 'off',
     'import/order': [
       'error',
@@ -27,5 +32,10 @@ module.exports = {
       'error',
       { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
     ],
+    'turbo/no-undeclared-env-vars': 'off',
+    'react/no-children-prop': 'off',
+    'tailwindcss/classnames-order': 'warn',
+    'tailwindcss/no-custom-classname': 'warn',
+    'tailwindcss/no-contradicting-classname': 'error',
   },
 };
