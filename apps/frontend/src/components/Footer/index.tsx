@@ -11,31 +11,31 @@ const Index = () => (
           {/* nav - start */}
           <nav className='mb-8 flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6'>
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
             >
               About
             </a>
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
             >
               Investor Relations
             </a>
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
             >
               Jobs
             </a>
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
             >
               Press
             </a>
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               className='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
             >
               Blog
@@ -46,7 +46,7 @@ const Index = () => (
           {/* social - start */}
           <div className='flex gap-8'>
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               target='_blank'
               className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
             >
@@ -57,7 +57,7 @@ const Index = () => (
             </a>
 
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               target='_blank'
               className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
             >
@@ -68,7 +68,7 @@ const Index = () => (
             </a>
 
             <a
-              href='apps/frontend/src/components#'
+              href='#'
               target='_blank'
               className='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
             >
