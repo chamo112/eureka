@@ -27,7 +27,7 @@ const ArticlePage = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
   if (!data || !data.article) {
-    router.replace('/404')
+    router.replace('/404');
     return;
   }
 
