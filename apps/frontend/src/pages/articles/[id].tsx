@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import Markdown from 'react-markdown';
 
 import { graphql } from '@/gql';
-import NotFoundPage from '@/pages/404';
 
 const queryDocument = graphql(`
   query Article($where: ArticleWhereUniqueInput!) {
@@ -27,7 +26,10 @@ const ArticlePage = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
-  if (!data || !data.article) return NotFoundPage;
+  if (!data || !data.article) {
+    router.replace('/404')
+    return;
+  }
 
   return (
     <div>
