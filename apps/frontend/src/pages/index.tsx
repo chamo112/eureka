@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
 
-import Card from '@/components/Card/index';
+import Card from '@/components/ArticleCard/index';
 import { graphql } from '@/gql';
 
 const queryDocument = graphql(`
@@ -33,7 +33,7 @@ const Index = () => {
       </div>
 
       {/* コンテンツ */}
-      <div className='mx-auto mt-12 grid max-w-lg gap-5 md:mx-20 lg:max-w-none lg:grid-cols-3'>
+      <div className='mx-auto mt-12 grid max-w-lg gap-10 md:mx-20 lg:max-w-none lg:grid-cols-3'>
         {data!.articles.map((article) => (
           <Card
             key={article.id}
@@ -48,8 +48,6 @@ const Index = () => {
               imageUrl: `${article.updatedBy!.picture}`,
             }}
             date='Mar 16, 2020'
-            datetime='2020-03-16'
-            readingTime='6 min'
           />
         ))}
       </div>
