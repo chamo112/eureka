@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import { ApolloProvider } from '@apollo/client';
 
 import Footer from '@/components/Footer/index';
+import Head from '@/components/Head/index';
 import Index from '@/components/Header';
 import { client } from '@/lib/apollo';
 
@@ -10,6 +11,8 @@ import type { AppProps } from 'next/app';
 function MyApp({ Component, pageProps }: AppProps<{}>): JSX.Element {
   return (
     <ApolloProvider client={client}>
+      <Head />
+
       <div className='max-w-screen-2xl'>
         <Index />
 
