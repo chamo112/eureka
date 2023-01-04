@@ -29,7 +29,7 @@ const Index = () => (
         className='text-black-800 inline-flex items-center gap-2.5 text-2xl font-bold md:text-3xl'
         aria-label='logo'
       >
-        elem
+        Elem
       </a>
 
       {/* ナビゲーション */}
