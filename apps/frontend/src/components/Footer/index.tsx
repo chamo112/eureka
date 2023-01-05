@@ -8,10 +8,6 @@ const NaviItems = [
     href: '#',
   },
   {
-    title: 'Category',
-    href: '#',
-  },
-  {
     title: 'Toolbox',
     href: '#',
   },
@@ -37,7 +33,7 @@ const Index = () => (
               <div key={item.title}>
                 <a
                   href={item.href}
-                  className='text-md text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'
+                  className='text-base text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'
                 >
                   {item.title}
                 </a>

@@ -3,13 +3,18 @@ type Article = {
   title: string;
   body: string;
   imageUrl: string;
-  categoryName: string;
+  labels: Label[];
   href: string;
   author: {
     name: string;
     imageUrl: string;
   };
   date: string;
+};
+
+type Label = {
+  id: string;
+  name: string;
 };
 
 export const Index = (props: Article): JSX.Element => {
@@ -30,20 +35,27 @@ export const Index = (props: Article): JSX.Element => {
 
         <div className='flex flex-1 flex-col justify-between bg-white p-6'>
           <div className='flex-1'>
-            <p className='text-sm font-medium text-indigo-600'>
-              <a
-                href='#'
-                className='hover:underline'
-              >
-                {props.categoryName}
-              </a>
+            <p className='flex text-sm font-medium text-indigo-600'>
+              {props.labels.map((label) => (
+                <div
+                  key={label.id}
+                  className='m-1 first:ml-0 last:mr-0'
+                >
+                  <a
+                    href='#'
+                    className='hover:underline'
+                  >
+                    {label.name}
+                  </a>
+                </div>
+              ))}
             </p>
 
             <a
               href={`blogs/${props.id}`}
               className='mt-2 block'
             >
-              <p className='font-semi-bold text-lg text-gray-900'>{props.title}</p>
+              <p className='text-lg font-semibold text-gray-900'>{props.title}</p>
               <p className='mt-3 text-base text-gray-500'>{props.body}</p>
             </a>
           </div>
