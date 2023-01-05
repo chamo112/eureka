@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
 
-import Card from '@/components/ArticleCard/index';
+import ArticleCard from '@/components/ArticleCard';
 import { graphql } from '@/gql';
 
 const queryDocument = graphql(`
@@ -12,6 +12,10 @@ const queryDocument = graphql(`
       updatedBy {
         name
         picture
+      }
+      labels {
+        id
+        name
       }
     }
   }
@@ -27,7 +31,7 @@ const Index = () => {
     <div className='px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28'>
       <div className='mb-10 md:mb-16'>
         {/* ブログのタイトル */}
-        <h2 className='font-semi-bold mb-4 text-center text-xl text-gray-700 md:mb-6 lg:text-3xl'>
+        <h2 className='mb-4 text-center text-xl font-semibold text-gray-700 md:mb-6 lg:text-3xl'>
           List of articles
         </h2>
       </div>
@@ -35,12 +39,12 @@ const Index = () => {
       {/* コンテンツ */}
       <div className='mx-auto mt-12 grid max-w-lg gap-10 md:mx-20 lg:max-w-none lg:grid-cols-3'>
         {data!.articles.map((article) => (
-          <Card
+          <ArticleCard
             key={article.id}
             id={article.id}
             title={article.title}
             body={article.body}
-            categoryName='Article'
+            labels={article.labels}
             href='#'
             imageUrl='https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80'
             author={{
