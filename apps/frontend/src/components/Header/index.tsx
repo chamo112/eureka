@@ -4,10 +4,6 @@ const NaviItems = [
     href: '#',
   },
   {
-    title: 'Category',
-    href: '#',
-  },
-  {
     title: 'Toolbox',
     href: '#',
   },
@@ -26,7 +22,7 @@ const Index = () => (
     <header className='flex items-center justify-between border-b px-12 py-4'>
       <a
         href='/'
-        className='text-black-800 inline-flex items-center gap-2.5 text-2xl font-bold md:text-3xl'
+        className='inline-flex items-center gap-2.5 text-2xl font-bold text-gray-800 md:text-3xl'
         aria-label='logo'
       >
         Elem
@@ -38,7 +34,7 @@ const Index = () => (
           <div key={item.title}>
             <a
               href={item.href}
-              className='text-md text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'
+              className='text-base text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700'
             >
               {item.title}
             </a>

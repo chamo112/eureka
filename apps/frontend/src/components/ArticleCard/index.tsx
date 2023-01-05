@@ -35,9 +35,12 @@ export const Index = (props: Article): JSX.Element => {
 
         <div className='flex flex-1 flex-col justify-between bg-white p-6'>
           <div className='flex-1'>
-            <p className='text-sm font-medium text-indigo-600'>
+            <p className='flex text-sm font-medium text-indigo-600'>
               {props.labels.map((label) => (
-                <div key={label.id}>
+                <div
+                  key={label.id}
+                  className='m-1 first:ml-0 last:mr-0'
+                >
                   <a
                     href='#'
                     className='hover:underline'
