@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client';
 
 import ArticleCard from '@/components/ArticleCard';
 import { graphql } from '@/gql';
+import BlogCard from '@/pages/blogs/components/blog-card';
 
 const queryDocument = graphql(`
   query MyQuery {
@@ -35,6 +36,8 @@ const Index = () => {
           List of articles
         </h2>
       </div>
+
+      <BlogCard />
 
       {/* コンテンツ */}
       <div className='mx-20 mt-12 grid gap-10 md:mx-auto md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
