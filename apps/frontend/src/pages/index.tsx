@@ -37,7 +37,7 @@ const Index = () => {
       </div>
 
       {/* コンテンツ */}
-      <div className='mx-auto mt-12 grid gap-10 sm:mx-10 md:grid-cols-2 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4'>
+      <div className='mx-20 mt-12 grid gap-10 md:mx-auto md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
         {data!.articles.map((article) => (
           <ArticleCard
             key={article.id}

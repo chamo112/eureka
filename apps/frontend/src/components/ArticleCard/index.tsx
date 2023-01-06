@@ -17,7 +17,7 @@ type Label = {
   name: string;
 };
 
-export const Index = (props: Article): JSX.Element => {
+const Index = (props: Article): JSX.Element => {
   return (
     <>
       {/* タイトル */}
