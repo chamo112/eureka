@@ -44,6 +44,7 @@ const Index = () => (
 
           {/* social - start */}
           <div className='flex gap-8'>
+            c
             <a
               href='#'
               target='_blank'
@@ -54,7 +55,6 @@ const Index = () => (
                 icon={faInstagram}
               />
             </a>
-
             <a
               href='#'
               target='_blank'
@@ -65,7 +65,6 @@ const Index = () => (
                 icon={faTwitter}
               />
             </a>
-
             <a
               href='#'
               target='_blank'
