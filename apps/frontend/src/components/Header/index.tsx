@@ -19,7 +19,7 @@ const NaviItems = [
 
 const Index = () => (
   <>
-    <header className='flex items-center justify-between border-b px-12 py-4'>
+    <header className='flex w-full items-center justify-between border-b px-12 py-4'>
       <a
         href='/'
         className='inline-flex items-center gap-2.5 text-2xl font-bold text-gray-800 md:text-3xl'

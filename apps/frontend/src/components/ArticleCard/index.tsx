@@ -17,7 +17,7 @@ type Label = {
   name: string;
 };
 
-export const Index = (props: Article): JSX.Element => {
+const Index = (props: Article): JSX.Element => {
   return (
     <>
       {/* タイトル */}
@@ -35,7 +35,7 @@ export const Index = (props: Article): JSX.Element => {
 
         <div className='flex flex-1 flex-col justify-between bg-white p-6'>
           <div className='flex-1'>
-            <p className='flex text-sm font-medium text-indigo-600'>
+            <div className='flex text-sm font-medium text-indigo-600'>
               {props.labels.map((label) => (
                 <div
                   key={label.id}
@@ -49,7 +49,7 @@ export const Index = (props: Article): JSX.Element => {
                   </a>
                 </div>
               ))}
-            </p>
+            </div>
 
             <a
               href={`blogs/${props.id}`}
