@@ -44,7 +44,6 @@ const Index = () => (
 
           {/* social - start */}
           <div className='flex gap-8'>
-            c
             <a
               href='#'
               target='_blank'

@@ -1,6 +1,5 @@
 import { useQuery } from '@apollo/client';
 
-import ArticleCard from '@/components/ArticleCard';
 import { graphql } from '@/gql';
 import BlogCard from '@/pages/blogs/components/blog-card';
 
@@ -10,7 +9,7 @@ const queryDocument = graphql(`
       id
       title
       body
-      updatedBy {
+      createdBy {
         name
         picture
       }
@@ -37,27 +36,10 @@ const Index = () => {
         </h2>
       </div>
 
-      <BlogCard />
-
       {/* コンテンツ */}
-      <div className='mx-20 mt-12 grid gap-10 md:mx-auto md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
-        {data!.articles.map((article) => (
-          <ArticleCard
-            key={article.id}
-            id={article.id}
-            title={article.title}
-            body={article.body}
-            labels={article.labels}
-            href='#'
-            imageUrl='https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80'
-            author={{
-              name: `${article.updatedBy!.name}`,
-              imageUrl: `${article.updatedBy!.picture}`,
-            }}
-            date='Mar 16, 2020'
-          />
-        ))}
-      </div>
+      {/* TODO: 後で直す */}
+      {/* @ts-ignore */}
+      <BlogCard articles={data!.articles!} />
     </div>
   );
 };
