@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 
+import BlogCards from '@/features/blogs/components/BlogCards';
 import { graphql } from '@/gql';
-import BlogCard from '@/pages/blogs/components/blog-card';
 
 const queryDocument = graphql(`
   query MyQuery {
@@ -26,6 +26,7 @@ const Index = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
+  if (!data) return <p>No Data!</p>;
 
   return (
     <div className='px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28'>
@@ -37,9 +38,7 @@ const Index = () => {
       </div>
 
       {/* コンテンツ */}
-      {/* TODO: 後で直す */}
-      {/* @ts-ignore */}
-      <BlogCard articles={data!.articles!} />
+      <BlogCards articles={data.articles} />
     </div>
   );
 };

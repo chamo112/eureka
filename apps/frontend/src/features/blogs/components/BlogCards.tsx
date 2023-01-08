@@ -1,6 +1,6 @@
 import ArticleCard from '@/components/ArticleCard';
 
-type Articles = {
+type Props = {
   articles: Article[];
 };
 
@@ -9,7 +9,7 @@ type Article = {
   title: string;
   body: string;
   labels: Label[];
-  createdBy: User;
+  createdBy?: User | null;
 };
 
 type Label = {
@@ -19,10 +19,10 @@ type Label = {
 
 type User = {
   name: string;
-  picture: string;
+  picture?: string | null;
 };
 
-const BlogCard = (props: Articles) => {
+const BlogCards = (props: Props) => {
   return (
     <div>
       <>
@@ -49,4 +49,4 @@ const BlogCard = (props: Articles) => {
   );
 };
 
-export default BlogCard;
+export default BlogCards;
