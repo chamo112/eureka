@@ -17,7 +17,7 @@ type Label = {
   name: string;
 };
 
-const Index = (props: Article): JSX.Element => {
+const ArticleCard = (props: Article): JSX.Element => {
   return (
     <>
       {/* タイトル */}
@@ -80,4 +80,4 @@ const Index = (props: Article): JSX.Element => {
   );
 };
 
-export default Index;
+export default ArticleCard;

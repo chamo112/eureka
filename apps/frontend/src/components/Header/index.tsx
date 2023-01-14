@@ -17,7 +17,7 @@ const NaviItems = [
   },
 ];
 
-const Index = () => (
+const Header = () => (
   <>
     <header className='flex w-full items-center justify-between border-b px-12 py-4'>
       <a
@@ -45,4 +45,4 @@ const Index = () => (
   </>
 );
 
-export default Index;
+export default Header;
