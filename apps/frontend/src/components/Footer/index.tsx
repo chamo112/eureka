@@ -22,7 +22,7 @@ const NaviItems = [
 ];
 
 const iconStyle: React.CSSProperties = { fontSize: 25 };
-const Index = () => (
+const Footer = () => (
   <>
     <div className='bg-white pt-4 sm:pt-10 lg:pt-12'>
       <footer className='mx-auto max-w-screen-2xl px-4 md:px-8'>
@@ -86,4 +86,4 @@ const Index = () => (
   </>
 );
 
-export default Index;
+export default Footer;
