@@ -9,6 +9,7 @@ type Article = {
   title: string;
   body: string;
   labels: Label[];
+  createdAt: any;
   createdBy?: User | null;
 };
 
@@ -22,7 +23,7 @@ type User = {
   picture?: string | null;
 };
 
-const BlogCards = (props: Props) => {
+const LabelArticleCards = (props: Props) => {
   return (
     <div>
       <>
@@ -40,7 +41,7 @@ const BlogCards = (props: Props) => {
                 name: `${article.createdBy!.name}`,
                 imageUrl: `${article.createdBy!.picture}`,
               }}
-              date='Mar 16, 2020'
+              date={article.createdAt}
             />
           ))}
         </div>
@@ -49,4 +50,4 @@ const BlogCards = (props: Props) => {
   );
 };
 
-export default BlogCards;
+export default LabelArticleCards;
