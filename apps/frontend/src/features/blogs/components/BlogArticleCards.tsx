@@ -9,6 +9,7 @@ type Article = {
   title: string;
   body: string;
   labels: Label[];
+  createdAt: any;
   createdBy?: User | null;
 };
 
@@ -40,7 +41,7 @@ const BlogArticleCards = (props: Props) => {
                 name: `${article.createdBy!.name}`,
                 imageUrl: `${article.createdBy!.picture}`,
               }}
-              date='Mar 16, 2020'
+              date={article.createdAt}
             />
           ))}
         </div>

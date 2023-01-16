@@ -9,6 +9,7 @@ const queryDocument = graphql(`
       id
       title
       body
+      createdAt
       createdBy {
         name
         picture
