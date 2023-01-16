@@ -28,12 +28,12 @@ const LabelPage = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
-  if (!data || !data.article) {
+  if (!data || !data.articles) {
     router.replace('/404');
     return;
   }
 
-  return <div></div>;
+  return <div>aaa</div>;
 };
 
 export default LabelPage;
