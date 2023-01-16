@@ -20,6 +20,7 @@ const queryDocument = graphql(`
 const LabelPage = () => {
   const router = useRouter();
   const { labelId } = router.query;
+
   const { loading, error, data } = useQuery(queryDocument, {
     variables: {
       where: { id: typeof labelId === 'string' ? labelId : '' },
@@ -33,7 +34,7 @@ const LabelPage = () => {
     return;
   }
 
-  return <div>aaa</div>;
+  return <div>${labelId}</div>;
 };
 
 export default LabelPage;

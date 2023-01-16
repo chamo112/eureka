@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client';
 
-import BlogCards from '@/features/blogs/components/BlogCards';
+import BlogArticleCards from '@/features/blogs/components/BlogArticleCards';
 import { graphql } from '@/gql';
 
 const queryDocument = graphql(`
@@ -38,7 +38,7 @@ const Index = () => {
       </div>
 
       {/* コンテンツ */}
-      <BlogCards articles={data.articles} />
+      <BlogArticleCards articles={data.articles} />
     </div>
   );
 };

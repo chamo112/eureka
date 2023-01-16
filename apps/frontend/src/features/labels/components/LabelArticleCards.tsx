@@ -22,7 +22,7 @@ type User = {
   picture?: string | null;
 };
 
-const BlogCards = (props: Props) => {
+const LabelArticleCards = (props: Props) => {
   return (
     <div>
       <>
@@ -49,4 +49,4 @@ const BlogCards = (props: Props) => {
   );
 };
 
-export default BlogCards;
+export default LabelArticleCards;
