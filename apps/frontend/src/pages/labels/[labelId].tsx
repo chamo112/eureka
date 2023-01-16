@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
 
+import LabelArticleCards from '@/features/labels/components/LabelArticleCards';
 import { graphql } from '@/gql';
 
 const queryDocument = graphql(`
@@ -9,6 +10,10 @@ const queryDocument = graphql(`
       id
       title
       body
+      createdBy {
+        name
+        picture
+      }
       labels(where: $where) {
         id
         name
@@ -34,7 +39,13 @@ const LabelPage = () => {
     return;
   }
 
-  return <div>${labelId}</div>;
+  return (
+    <>
+      <div className='px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28'>
+        <LabelArticleCards articles={data.articles} />
+      </div>
+    </>
+  );
 };
 
 export default LabelPage;
