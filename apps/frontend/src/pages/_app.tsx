@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 import { ApolloProvider } from '@apollo/client';
+import { ChakraProvider } from '@chakra-ui/react';
 
 import Footer from '@/components/Footer/index';
 import Head from '@/components/Head/index';
@@ -10,17 +11,19 @@ import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps<{}>): JSX.Element {
   return (
-    <ApolloProvider client={client}>
-      <Head />
+    <ChakraProvider>
+      <ApolloProvider client={client}>
+        <Head />
 
-      <div className='max-w-screen-2xl'>
-        <Index />
+        <div className='max-w-screen-2xl'>
+          <Index />
 
-        <Component {...pageProps} />
+          <Component {...pageProps} />
 
-        <Footer />
-      </div>
-    </ApolloProvider>
+          <Footer />
+        </div>
+      </ApolloProvider>
+    </ChakraProvider>
   );
 }
 
