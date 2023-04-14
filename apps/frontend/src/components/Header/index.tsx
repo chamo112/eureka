@@ -25,7 +25,7 @@ const Header = () => (
         className='inline-flex items-center gap-2.5 text-2xl font-bold text-gray-800 md:text-3xl'
         aria-label='logo'
       >
-        Elem
+        Eureka
       </a>
 
       {/* ナビゲーション */}
