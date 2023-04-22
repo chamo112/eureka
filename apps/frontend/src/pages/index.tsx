@@ -1,8 +1,9 @@
 import { useQuery } from '@apollo/client';
 
-import LocalButton from '@/components/LocalButton';
-import BlogArticleCards from '@/features/blogs/components/BlogArticleCards';
+import { Button } from '@/components/Elements';
+import BlogArticleCards  from '@/features/blogs/components/BlogArticleCards';
 import { graphql } from '@/gql';
+
 
 const queryDocument = graphql(`
   query MyQuery {
@@ -32,7 +33,7 @@ const Index = () => {
 
   return (
     <div className='px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28'>
-      <LocalButton
+      <Button
         size='sm'
         color='teal'
       />
