@@ -3,7 +3,7 @@ function IndexPage() {
   return (
     <div>
       <Head>
-        <title>Elem</title>
+        <title>eureka</title>
         <meta
           property='og:title'
           content='My page title'
