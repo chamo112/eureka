@@ -34,7 +34,7 @@ const Index = () => {
   return (
       <>
         {/* TODO: レイアウト修正 */}
-        <Button>New Post</Button>
+        <Button>New Postaaa</Button>
 
         <div className='px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28'>
           <div className='mb-10 md:mb-16'>
