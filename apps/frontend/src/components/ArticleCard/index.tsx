@@ -1,3 +1,5 @@
+import { pagePaths } from '@/utils/pagePaths';
+
 type Article = {
   id: string;
   title: string;
@@ -42,7 +44,7 @@ const ArticleCard = (props: Article): JSX.Element => {
                   className='m-1 first:ml-0 last:mr-0'
                 >
                   <a
-                    href={`labels/${label.id}`}
+                    href={pagePaths.labelDetail(label.id)}
                     className='hover:underline'
                   >
                     {label.name}
@@ -52,7 +54,7 @@ const ArticleCard = (props: Article): JSX.Element => {
             </div>
 
             <a
-              href={`blogs/${props.id}`}
+              href={pagePaths.blogDetail(props.id)}
               className='mt-2 block'
             >
               <p className='text-lg font-semibold text-gray-900'>{props.title}</p>
