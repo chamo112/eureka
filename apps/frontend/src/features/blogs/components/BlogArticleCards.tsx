@@ -7,7 +7,6 @@ type Props = {
 type Article = {
   id: string;
   title: string;
-  body: string;
   labels: Label[];
   createdAt: any;
   createdBy?: User | null;
