@@ -3,14 +3,9 @@ import { pagePaths } from '@/utils/pagePaths';
 type Article = {
   id: string;
   title: string;
-  body: string;
   imageUrl: string;
   labels: Label[];
   href: string;
-  author: {
-    name: string;
-    imageUrl: string;
-  };
   date: string;
 };
 
@@ -25,7 +20,7 @@ const ArticleCard = (props: Article): JSX.Element => {
       {/* タイトル */}
       <div
         key={props.title}
-        className='flex flex-col overflow-hidden rounded-lg shadow-lg'
+        className='flex flex-col overflow-hidden rounded-xl shadow-lg'
       >
         <div className='shrink-0'>
           <img
@@ -58,23 +53,11 @@ const ArticleCard = (props: Article): JSX.Element => {
               className='mt-2 block'
             >
               <p className='text-lg font-semibold text-gray-900'>{props.title}</p>
-              <p className='mt-3 text-base text-gray-500'>{props.body}</p>
             </a>
           </div>
 
           <div className='mt-6 flex items-center'>
-            <div className='shrink-0'>
-              <img
-                className='h-10 w-10 rounded-full'
-                src={props.author.imageUrl}
-                alt='{props.author.name}'
-              />
-            </div>
-
-            <div className='ml-3'>
-              <p className='text-sm font-medium text-gray-900'>{props.author.name}</p>
-              <p className='text-xs font-medium text-gray-500'>{props.date}</p>
-            </div>
+            <p className='text-xs font-medium text-gray-500'>{props.date}</p>
           </div>
         </div>
       </div>
