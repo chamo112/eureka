@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
-import Markdown from 'react-markdown';
 
+import MyMarkdown from '@/components/MyMarkdown';
 import { graphql } from '@/gql';
 
 const queryDocument = graphql(`
@@ -32,10 +32,17 @@ const ArticlePage = () => {
   }
 
   return (
-    <div>
-      <div>{id}</div>
-      <Markdown>{data!.article!.body}</Markdown>
-    </div>
+    <>
+      <div className='mt-10 flex items-center justify-center'>
+        <div className='w-3/5'>
+          <div className='py-3 text-4xl font-bold'>{data.article.title}</div>
+
+          <div className='mt-6'>
+            <MyMarkdown>{data.article.title}</MyMarkdown>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
