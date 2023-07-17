@@ -1,7 +1,8 @@
 import { useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
-import MyMarkdown from '@/components/MyMarkdown';
 import { graphql } from '@/gql';
 
 const queryDocument = graphql(`
@@ -38,7 +39,12 @@ const ArticlePage = () => {
           <div className='py-3 text-4xl font-bold'>{data.article.title}</div>
 
           <div className='mt-6'>
-            <MyMarkdown>{data.article.title}</MyMarkdown>
+            <ReactMarkdown
+              className='lib-markdown'
+              remarkPlugins={[remarkGfm]}
+            >
+              {data.article.body}
+            </ReactMarkdown>
           </div>
         </div>
       </div>
