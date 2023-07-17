@@ -1,0 +1,23 @@
+.lib-markdown h1 {
+    @apply text-h1
+}
+
+.lib-markdown h2 {
+    @apply text-h2
+}
+
+.lib-markdown h3 {
+    @apply text-h3
+}
+
+.lib-markdown h4 {
+    @apply text-h4
+}
+
+.lib-markdown h5 {
+    @apply text-h5
+}
+
+.lib-markdown h6 {
+    @apply text-h6
+}

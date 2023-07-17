@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
-import Markdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 import { graphql } from '@/gql';
 
@@ -32,10 +33,22 @@ const ArticlePage = () => {
   }
 
   return (
-    <div>
-      <div>{id}</div>
-      <Markdown>{data!.article!.body}</Markdown>
-    </div>
+    <>
+      <div className='mt-10 flex items-center justify-center'>
+        <div className='w-3/5'>
+          <div className='py-3 text-4xl font-bold'>{data.article.title}</div>
+
+          <div className='mt-6'>
+            <ReactMarkdown
+              className='lib-markdown'
+              remarkPlugins={[remarkGfm]}
+            >
+              {data.article.body}
+            </ReactMarkdown>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

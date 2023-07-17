@@ -6,7 +6,7 @@ const Index = () => {
           {/* TODO: コンポーネント化 */}
           {/* タイトル */}
           <input
-            className='h-10 w-[36rem] rounded text-xl focus:outline-0'
+            className='h-10 w-[36rem] rounded text-xl font-bold focus:outline-0'
             type='text'
             placeholder='タイトル'
           />
@@ -18,7 +18,7 @@ const Index = () => {
           <div className='h-max min-h-[36rem] rounded-lg border px-8 py-10  shadow-lg'>
             <textarea
               className='h-screen w-full resize-none rounded focus:outline-0'
-              placeholder='記事を入力'
+              placeholder='記事を入力...'
             />
           </div>
         </div>
