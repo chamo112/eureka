@@ -18,10 +18,7 @@ const ArticleCard = (props: Article): JSX.Element => {
   return (
     <>
       {/* タイトル */}
-      <a
-        href={pagePaths.blogDetail(props.id)}
-        className='mt-2 block'
-      >
+      <a href={pagePaths.blogDetail(props.id)}>
         <div
           key={props.title}
           className='flex flex-col overflow-hidden rounded-xl shadow-lg'
