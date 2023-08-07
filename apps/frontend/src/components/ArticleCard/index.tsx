@@ -21,7 +21,7 @@ const ArticleCard = (props: Article): JSX.Element => {
       <a href={pagePaths.blogDetail(props.id)}>
         <div
           key={props.title}
-          className='flex flex-col overflow-hidden rounded-xl shadow-lg'
+          className='flex h-full flex-col overflow-hidden rounded-xl shadow-lg'
         >
           <img
             className='h-48 w-full object-cover'
@@ -30,13 +30,13 @@ const ArticleCard = (props: Article): JSX.Element => {
           />
 
           <div className='px-6 py-4'>
-            <div className='mb-4 h-16 truncate'>
+            <div className='mb-4 h-16'>
               <p className='text-lg font-semibold text-gray-900'>{props.title}</p>
             </div>
 
-            {/*<div className='mt-6 flex items-center'>*/}
-            <p className='text-xs font-medium text-gray-500'>{props.date}</p>
-            {/*</div>*/}
+            <div className='h-8'>
+              <p className='text-xs font-medium text-gray-500'>{props.date}</p>
+            </div>
 
             {props.labels && (
               <div className='flex text-sm font-medium text-pink-600'>
