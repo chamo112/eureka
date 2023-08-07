@@ -34,7 +34,6 @@ const Index = () => {
 
   return (
     <>
-      {/* TODO: レイアウト修正 */}
       <div className='mb-10 mt-6 flex justify-end pr-8'>
         <Link href={pagePaths.newPost()}>
           <Button>New Post</Button>
