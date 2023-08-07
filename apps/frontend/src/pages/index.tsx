@@ -1,10 +1,7 @@
 import { useQuery } from '@apollo/client';
-import Link from 'next/link';
 
-import { Button } from '@/components/Elements';
 import BlogArticleCards from '@/features/blogs/components/BlogArticleCards';
 import { graphql } from '@/gql';
-import { pagePaths } from '@/utils/pagePaths';
 
 const queryDocument = graphql(`
   query MyQuery {
@@ -34,17 +31,23 @@ const Index = () => {
 
   return (
     <>
-      <div className='mb-10 mt-6 flex justify-end pr-8'>
-        <Link href={pagePaths.newPost()}>
-          <Button>New Post</Button>
-        </Link>
+      {/*<div className='flex justify-end'>*/}
+      {/*  <Link href={pagePaths.newPost()}>*/}
+      {/*    <Button>New Post</Button>*/}
+      {/*  </Link>*/}
+      {/*</div>*/}
+      <div className='mx-auto my-0 max-w-4xl px-6'>
+        {/* TODO: スペーサー追加する*/}
+        <div className='h-8 w-full' />
+
+        {/* ブログのタイトル */}
+        <h2 className='text-h1 font-semibold text-gray-700'>Blog</h2>
+
+        <div className='h-8 w-full' />
+
+        {/* コンテンツ */}
+        <BlogArticleCards articles={data.articles} />
       </div>
-
-      {/* ブログのタイトル */}
-      <h2 className='mb-10 text-center text-3xl font-semibold text-gray-700'>Blog</h2>
-
-      {/* コンテンツ */}
-      <BlogArticleCards articles={data.articles} />
     </>
   );
 };

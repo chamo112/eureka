@@ -27,11 +27,11 @@ const twitterUrl: string = process.env.TWITTER_URL!;
 
 const Footer = () => (
   <>
-    <div className='bg-white pt-4 sm:pt-10 lg:pt-12'>
-      <footer className='mx-auto max-w-screen-2xl px-4 md:px-8'>
-        <div className='flex flex-col items-center border-t pb-12 pt-6'>
+    <div className='mt-8 py-8'>
+      <footer className='mx-auto max-w-screen-2xl'>
+        <div className='flex flex-col items-center'>
           {/* nav - start */}
-          <nav className='mb-8 flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6'>
+          <nav className='flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6'>
             {NaviItems.map((item) => (
               <div key={item.title}>
                 <a
@@ -44,7 +44,7 @@ const Footer = () => (
             ))}
           </nav>
 
-          <div className='flex gap-8'>
+          <div className='mt-2 flex gap-8'>
             <a
               href={twitterUrl}
               target='_blank'
