@@ -39,7 +39,7 @@ const ArticleCard = (props: Article): JSX.Element => {
                   className='m-1 first:ml-0 last:mr-0'
                 >
                   <a
-                    href={pagePaths.labelDetail(label.id)}
+                    href={pagePaths.labelDetail(label.name)}
                     className='hover:underline'
                   >
                     {label.name}

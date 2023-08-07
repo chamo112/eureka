@@ -9,10 +9,10 @@ export const pagePaths = {
 
   /**
    * ラベルの詳細ページ
-   * @param id
+   * @param name
    */
-  labelDetail(id: string): string {
-    return `/labels/${id}`;
+  labelDetail(name: string): string {
+    return `/topics/${name}`;
   },
 
   /**

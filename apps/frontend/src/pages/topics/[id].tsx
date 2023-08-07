@@ -42,7 +42,8 @@ const LabelPage = () => {
 
   return (
     <>
-      <div className='px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28'>
+      <div className='px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24'>
+        {/*<div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:max-w-4xl md:grid-cols-3'>s*/}
         <LabelArticleCards articles={data.articles} />
       </div>
     </>
