@@ -8,11 +8,11 @@ export const pagePaths = {
   },
 
   /**
-   * ラベルの詳細ページ
-   * @param name
+   * Topicsの詳細ページ
+   * @param tagName
    */
-  labelDetail(name: string): string {
-    return `/topics/${name}`;
+  labelDetail(tagName: string): string {
+    return `/tags/${tagName}`;
   },
 
   /**

@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
 
-import LabelArticleCards from '@/features/labels/components/LabelArticleCards';
+import BlogArticleCards from '@/features/blogs/components/BlogArticleCards';
 import { graphql } from '@/gql';
 
 const queryDocument = graphql(`
@@ -25,11 +25,11 @@ const queryDocument = graphql(`
 
 const LabelPage = () => {
   const router = useRouter();
-  const { labelId } = router.query;
+  const { tagName } = router.query;
 
   const { loading, error, data } = useQuery(queryDocument, {
     variables: {
-      where: { id: typeof labelId === 'string' ? labelId : '' },
+      where: { id: typeof tagName === 'string' ? tagName : '' },
     },
   });
 
@@ -42,9 +42,15 @@ const LabelPage = () => {
 
   return (
     <>
-      <div className='px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24'>
-        {/*<div className='grid grid-cols-1 gap-6 sm:grid-cols-2 md:max-w-4xl md:grid-cols-3'>s*/}
-        <LabelArticleCards articles={data.articles} />
+      <div className='mx-auto my-0 max-w-4xl px-6'>
+        <div className='h-8 w-full' />
+
+        {/* ブログのタイトル */}
+        <h2 className='text-h1 font-semibold text-gray-700'>{tagName}</h2>
+
+        <div className='h-8 w-full' />
+
+        <BlogArticleCards articles={data.articles} />
       </div>
     </>
   );

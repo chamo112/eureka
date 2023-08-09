@@ -31,11 +31,6 @@ const Index = () => {
 
   return (
     <>
-      {/*<div className='flex justify-end'>*/}
-      {/*  <Link href={pagePaths.newPost()}>*/}
-      {/*    <Button>New Post</Button>*/}
-      {/*  </Link>*/}
-      {/*</div>*/}
       <div className='mx-auto my-0 max-w-4xl px-6'>
         {/* TODO: スペーサー追加する*/}
         <div className='h-8 w-full' />
