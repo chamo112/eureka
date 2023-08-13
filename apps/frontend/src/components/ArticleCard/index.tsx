@@ -1,3 +1,4 @@
+import { formatDate } from '@/utils/day';
 import { pagePaths } from '@/utils/pagePaths';
 
 type Article = {
@@ -34,9 +35,9 @@ const ArticleCard = (props: Article): JSX.Element => {
               <p className='text-lg font-semibold text-gray-900'>{props.title}</p>
             </div>
 
-            <div className='h-8'>
-              <p className='text-xs font-medium text-gray-500'>{props.date}</p>
-            </div>
+            <p className='text-xs font-medium text-gray-500'>
+              {formatDate.toDateWithTime(props.date)}
+            </p>
 
             {props.labels && (
               <div className='flex text-sm font-medium text-pink-600'>
