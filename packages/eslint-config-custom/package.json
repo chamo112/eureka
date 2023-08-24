@@ -14,7 +14,7 @@
     "eslint-plugin-unused-imports": "2.0.0"
   },
   "devDependencies": {
-    "typescript": "4.9.5"
+    "typescript": "5.2.2"
   },
   "publishConfig": {
     "access": "public"
