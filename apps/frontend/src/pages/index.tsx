@@ -31,17 +31,14 @@ const Index = () => {
 
   return (
     <>
-      <div className='mx-auto my-0 max-w-4xl px-6'>
-        {/* TODO: スペーサー追加する*/}
-        <div className='h-8 w-full' />
-
+      <div className='mx-auto my-8 max-w-5xl px-6'>
         {/* ブログのタイトル */}
         <h2 className='text-h1 font-semibold text-gray-700'>Blog</h2>
 
-        <div className='h-8 w-full' />
-
         {/* コンテンツ */}
-        <BlogArticleCards articles={data.articles} />
+        <div className='mt-8'>
+          <BlogArticleCards articles={data.articles} />
+        </div>
       </div>
     </>
   );

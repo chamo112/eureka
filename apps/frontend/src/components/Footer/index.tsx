@@ -1,4 +1,4 @@
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
@@ -27,7 +27,7 @@ const twitterUrl: string = process.env.TWITTER_URL!;
 
 const Footer = () => (
   <>
-    <div className='mt-8 py-8'>
+    <div className='sticky bottom-0 top-full mt-8 py-8'>
       <footer className='mx-auto max-w-screen-2xl'>
         <div className='flex flex-col items-center'>
           {/* nav - start */}
@@ -52,7 +52,7 @@ const Footer = () => (
             >
               <FontAwesomeIcon
                 style={iconStyle}
-                icon={faTwitter}
+                icon={faXTwitter}
               />
             </a>
             <a

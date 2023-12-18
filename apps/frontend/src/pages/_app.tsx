@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps<{}>): JSX.Element {
       <ApolloProvider client={client}>
         <Head />
 
-        <div className='max-w-screen-2xl'>
+        <div className='h-screen max-w-screen-2xl bg-stone-100'>
           <Index />
 
           <Component {...pageProps} />

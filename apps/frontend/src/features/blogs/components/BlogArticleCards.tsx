@@ -32,8 +32,6 @@ const BlogArticleCards = (props: Props) => {
             id={article.id}
             title={article.title}
             labels={article.labels}
-            href='#'
-            imageUrl='https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80'
             date={article.createdAt}
           />
         ))}
