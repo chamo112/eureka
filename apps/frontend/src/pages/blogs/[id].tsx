@@ -36,7 +36,7 @@ const ArticlePage = () => {
     <>
       <div className='mt-10 flex items-center justify-center'>
         <div className='w-3/5'>
-          <div className='py-3 text-4xl font-bold'>{data.article.title}</div>
+          <div className='py-3 text-h1 font-bold'>{data.article.title}</div>
 
           <div className='mt-6'>
             <ReactMarkdown

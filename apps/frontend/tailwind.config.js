@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import { EuSemanticColor } from './tailwind-color';
 
 module.exports = {
   content: ['./src/**/*.{ts,tsx}'],
@@ -9,15 +10,16 @@ module.exports = {
       },
       fontSize: {
         h1: [
-          '1.7em',
+          '1.7rem',
           {
             paddingBottom: '0.2em',
             fontWeight: 700,
             lineHeight: 1.5,
+            letterSpacing: '0.1em',
           },
         ],
         h2: [
-          '1.5em',
+          '1.5rem',
           {
             paddingBottom: '0.2em',
             fontWeight: 700,
@@ -25,7 +27,7 @@ module.exports = {
           },
         ],
         h3: [
-          '1.3em',
+          '1.3rem',
           {
             paddingBottom: '0.2em',
             fontWeight: 700,
@@ -33,15 +35,15 @@ module.exports = {
           },
         ],
         h4: [
-          '1.1em',
+          '1.1rem',
           {
             paddingBottom: '0.2em',
             fontWeight: 700,
-            lineHeight: 1.5,
+            lineHeight: 2.5,
           },
         ],
         h5: [
-          '1em',
+          '1rem',
           {
             paddingBottom: '0.2em',
             fontWeight: 700,
@@ -49,7 +51,7 @@ module.exports = {
           },
         ],
         h6: [
-          '.9em',
+          '.9rem',
           {
             paddingBottom: '0.2em',
             fontWeight: 700,
@@ -61,6 +63,7 @@ module.exports = {
         sm: '427px',
         md: '769px',
       },
+      colors: EuSemanticColor,
     },
   },
   plugins: [],
