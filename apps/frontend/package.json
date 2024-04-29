@@ -12,7 +12,7 @@
     "codegen:watch": "graphql-codegen --watch"
   },
   "dependencies": {
-    "@apollo/client": "3.8.8",
+    "@apollo/client": "3.10.1",
     "@chakra-ui/react": "2.8.2",
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
@@ -20,9 +20,9 @@
     "@fortawesome/free-brands-svg-icons": "6.5.2",
     "@fortawesome/react-fontawesome": "0.2.0",
     "clsx": "2.1.1",
-    "framer-motion": "10.18.0",
+    "framer-motion": "11.1.7",
     "graphql": "16.8.1",
-    "next": "14.0.4",
+    "next": "14.2.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-markdown": "9.0.1",
@@ -31,8 +31,8 @@
   },
   "devDependencies": {
     "@babel/core": "7.24.4",
-    "@graphql-codegen/cli": "5.0.0",
-    "@graphql-codegen/client-preset": "4.1.0",
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/client-preset": "4.2.5",
     "@types/node": "20.12.7",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
@@ -44,6 +44,6 @@
     "postcss-nested": "6.0.1",
     "tailwindcss": "3.4.3",
     "tsconfig": "*",
-    "typescript": "5.3.3"
+    "typescript": "5.4.5"
   }
 }
