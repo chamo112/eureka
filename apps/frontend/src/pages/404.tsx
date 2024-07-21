@@ -10,7 +10,7 @@ const NotFoundPage = () => {
                 src='https://images.unsplash.com/photo-1626790680787-de5e9a07bcf2?auto=format&q=75&fit=crop&w=600'
                 loading='lazy'
                 alt='Photo by Theo Crazzolara'
-                className='h-full w-full object-cover object-center'
+                className='size-full object-cover object-center'
               />
             </div>
             {/* image - end */}
