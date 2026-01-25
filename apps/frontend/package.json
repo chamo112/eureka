@@ -42,7 +42,7 @@
     "eslint-config-custom": "*",
     "postcss": "8.5.6",
     "postcss-nested": "6.2.0",
-    "tailwindcss": "3.4.3",
+    "tailwindcss": "3.4.19",
     "tsconfig": "*",
     "typescript": "5.4.5"
   }
